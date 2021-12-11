@@ -1,0 +1,83 @@
+:root {
+    --my-padding: 0.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: white;
+    gap: 10px;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main footer extra extra"
+    "banner banner banner banner"
+    ;
+}
+
+.header {
+    background-color: black;
+    grid-area: header;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
+
+.menu {
+    background-color: red;
+    grid-area: menu;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
+
+.hero {
+    background-color: blue;
+    grid-area: hero;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
+
+.main {
+    background-color: brown;
+    grid-area: main;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
+
+.banner {
+    background-color: orange;
+    grid-area: banner;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
+
+.extra {
+    background-color: green;
+    grid-area: extra;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
+
+.image {
+    background-color: gray;
+    grid-area: image;
+    padding: var(--my-padding);
+    display: grid;
+    align-items: center;
+}
