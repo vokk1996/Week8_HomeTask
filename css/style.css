@@ -10,18 +10,17 @@
 
 .container {
     color: white;
-    gap: 10px;
     height: 100vh;
     text-align: center;
     text-transform: uppercase;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2.5fr 1fr 1fr 0.7fr;
     grid-template-areas: 
     "header menu menu menu"
     "hero hero hero hero"
     "main main image image"
-    "main footer extra extra"
+    "main main extra extra"
     "banner banner banner banner"
     ;
 }
@@ -80,4 +79,39 @@
     padding: var(--my-padding);
     display: grid;
     align-items: center;
+}
+
+@media (max-width: 1024px) {
+    
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 2fr 2fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        "menu main main main"
+        "menu banner banner banner"
+        "menu extra extra image"
+        ;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1.5fr 2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas: 
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+
+        ;
+    }
+
 }
